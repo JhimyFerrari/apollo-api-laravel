@@ -1,0 +1,10 @@
+services:
+  db:
+    image: postgres:17           # imagem do MySQL
+    container_name: db_api_apollo     # nome do container
+    environment:
+      POSTGRES_USER: development
+      POSTGRES_PASSWORD: password  # senha do root
+      POSTGRES_DB: apollo_api_development   # banco inicial
+    ports:
+      - "5432:5432"
